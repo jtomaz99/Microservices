@@ -1,0 +1,63 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/StudentAttendance",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7133
+        }
+      ],
+
+      "UpstreamPathTemplate": "/ApiGateway/StudentAttendance",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/StudentAdmission",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7217
+        }
+      ],
+
+      "UpstreamPathTemplate": "/ApiGateway/StudentAdmission",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/SuperHero",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7268
+        }
+      ],
+
+      "UpstreamPathTemplate": "/ApiGateway/SuperHero",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+
+      "CorsPolicyName": "CorsPolicy"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/SuperHero/DeleteHero/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7268
+        }
+      ],
+
+      "UpstreamPathTemplate": "/ApiGateway/SuperHero/Delete/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+
+      "CorsPolicyName": "CorsPolicy"
+    }
+  ]
+}
